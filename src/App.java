@@ -161,9 +161,7 @@ public class App {
         }
     }
 
-    /**
-     * Prevents wrongful Integer Inputs
-     */
+    /**     Prevents wrongful Integer Inputs        */
     public static int testInput() {
         Scanner scan = new Scanner(System.in);
         try {
@@ -173,9 +171,7 @@ public class App {
         }
     }
 
-    /**
-     * Changes game-file settings
-     */
+    /**     Changes game-file settings      */
     public static void settings() throws InterruptedException, IOException {
         boolean exit = false;
         while (!exit) {

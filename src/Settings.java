@@ -17,9 +17,7 @@ public class Settings {
     public static int lockedCells = 3;
     public static int alignInARow = 3;
 
-    /**
-     * Loading pre-set settings OR Creates a new file with default value of settings
-     */
+    /**     Loading pre-set settings OR Creates a new file with default value of settings       */
     public static void readSettings() throws IOException {
         File settingFile = new File("./src/AppData.txt");
         if (System.getProperty("user.dir").contains("\\src")) {
@@ -73,9 +71,7 @@ public class Settings {
         }
     }
 
-    /**
-     * Updates AppData.txt file
-     */
+    /**     Updates AppData.txt file        */
     public static void writeSettings() throws IOException {
         File settingFile = new File("./src/AppData.txt");
         if (System.getProperty("user.dir").contains("\\src")) settingFile = new File("./AppData.txt");
