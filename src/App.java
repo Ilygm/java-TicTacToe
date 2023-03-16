@@ -55,9 +55,7 @@ public class App {
         }
     }
 
-    /**
-     * Clears Screen ノ( º _ ºノ)
-     */
+    /**      Clears Screen ノ( º _ ºノ)       */
     public static void clearScreen() {
         // new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         System.out.print("\033[H\033[2J");
@@ -109,7 +107,6 @@ public class App {
 
     /**
      * Player versus AI mode
-     *
      * @param p1 Player 1 [ O ]
      * @param p2 Player 2 [ X ]
      * @throws InterruptedException Again; I have no idea what this does ¯\_(ツ)_/¯
