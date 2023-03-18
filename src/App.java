@@ -84,7 +84,7 @@ public class App {
                     if (p1.winLogic(board.gameBoard)) {
                         clearScreen();
                         board.printBoard();
-                        System.out.print(" || [ X ] HAS WON THIS MATCH ||");
+                        System.out.print(" || [" + "\033[1;37m X \033[0m" + "] HAS WON THIS MATCH ||");
                         Thread.sleep(3000);
                         break;
                     }
@@ -96,7 +96,7 @@ public class App {
                     if (p2.winLogic(board.gameBoard)) {
                         clearScreen();
                         board.printBoard();
-                        System.out.print(" || [ O ] HAS WON THIS MATCH ||");
+                        System.out.print(" || ["+ "\033[1;34m O \033[0m" + "] HAS WON THIS MATCH ||");
                         Thread.sleep(3000);
                         break;
                     }

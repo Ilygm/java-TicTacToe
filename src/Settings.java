@@ -6,8 +6,6 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Settings {
-
-
     /**
      * boardSize : Size of the game-board
      * lockedCells : Amount of locked squares in board

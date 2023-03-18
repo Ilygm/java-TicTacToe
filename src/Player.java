@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Player {
-
     /**     Stores player input for later usage     */
     public int yInput, xInput;
     /**     is the player [ X ]?    */
@@ -15,8 +14,8 @@ public class Player {
     /**     Gets input and stores in local variables        */
     public boolean getInput() throws InterruptedException {
         Scanner scan = new Scanner(System.in);
-        if (isPlayerX) System.out.print(" It's [ X ] turn:  \n yAxes: ");
-        else System.out.print(" It's [ O ] turn:  \n yAxes: ");
+        if (isPlayerX) System.out.print(" It's [" + "\033[1;37m X \033[0m" + "] turn:  \n yAxes: ");
+        else System.out.print(" It's ["+ "\033[1;34m O \033[0m" +"] turn:  \n yAxes: ");
 
         int temp;
         try {
@@ -39,7 +38,6 @@ public class Player {
         xInput = temp;
         return true;
     }
-
 
     /**
      * Tries to fill the selected
@@ -78,7 +76,6 @@ public class Player {
         else if (diagonalCounterTR(gameBoard)) return true;
         else return diagonalCounterTL(gameBoard);
     }
-
 
     private boolean verticalCounter(BoardValues[][] gameBoard) {
         int count = 1;

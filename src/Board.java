@@ -2,12 +2,11 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Board {
-
     /**     Game-board itself    */
     public BoardValues[][] gameBoard;
+
     /**     Array to store used cells    */
     public ArrayList<Integer> squareList = new ArrayList<>();
-
 
     /**     Locks random cells in the board     */
     public void squareLocker() {
@@ -57,7 +56,7 @@ public class Board {
         for (int i = 0; i < Settings.boardSize; i++) {
             System.out.printf("%-2d |", i + 1);
             for (int j = 0; j < Settings.boardSize; j++) {
-                System.out.printf(" %s |", (translator(gameBoard[i][j]) + "\033[0m"));
+                System.out.printf(" %s |", (translator(gameBoard[i][j])));
             }
             System.out.println(temp.toString() + '-');
         }
@@ -71,16 +70,16 @@ public class Board {
     private String translator(BoardValues value) {
         switch (value) {
             case BLOCKED -> {
-                return "\033[1;31m" + "#"; // It's RED
+                return "\033[1;31m" + "#" + "\033[0m"; // It's RED
             }
             case EMPTY -> {
-                return "\033[1;30m" + "-"; // It's BLACK
+                return "\033[1;30m" + "-" + "\033[0m"; // It's BLACK
             }
             case X -> {
-                return "\033[1;37m" + "X"; // It's WHITE
+                return "\033[1;37m" + "X" + "\033[0m"; // It's WHITE
             }
             case O -> {
-                return "\033[1;34m" + "O"; // It's BLUE
+                return "\033[1;34m" + "O" + "\033[0m"; // It's BLUE
             }
             default -> {
                 return "F";
